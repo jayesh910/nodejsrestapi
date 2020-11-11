@@ -14,3 +14,15 @@ npm install
 ```
 node server.js
 ```
+
+MAKE SURE TO RUN THESE STEPS :
+docker network create app_network
+
+docker run -d -it --network app_network -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=testdb --name mysqlname mysql
+
+CREATE TABLE IF NOT EXISTS `customers` (id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT, email varchar(255) NOT NULL, name varchar(255) NOT NULL,active BOOLEAN DEFAULT false) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO customers(id, email, name, active) VALUES (25, "nehakum@cybage.com" , "Neha" , 1);
+
+docker run -d -it -p 3000:3000 --network app_network --name nodejsapp __
+
+ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'root';
