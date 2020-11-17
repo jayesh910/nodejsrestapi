@@ -1,6 +1,6 @@
 module.exports = {
-  HOST: "mysqlname",
+  HOST: "nodejsmysql",
   USER: "root",
-  PASSWORD: "root",
+  PASSWORD: "Password@123",
   DB: "testdb"
 };
