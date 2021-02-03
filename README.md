@@ -15,7 +15,7 @@ npm install
 node server.js
 ```
 
-MAKE SURE TO RUN THESE STEPS :
+MAKE SURE TO RUN THESE STEPS for dockerizing app:
 docker network create app_network
 
 docker run -d -it --network app_network -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=testdb --name mysqlname mysql
